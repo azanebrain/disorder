@@ -1,6 +1,6 @@
 {
   "name": "disorder",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.5",
@@ -36,6 +36,8 @@
     "node": ">=0.10.0"
   },
   "scripts": {
+    "build" : "grunt",
+    "serve" : "grunt serve",
     "test": "grunt test"
   }
 }
