@@ -1,6 +1,6 @@
 # Dis Order
 
-An angular task organization tool with WordPress as the backend
+A simple organization platform. Uses AngularJS to plug into a WordPress backend.
 
 # Run
 There are 3 commands for running the app:
