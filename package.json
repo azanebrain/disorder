@@ -1,0 +1,19 @@
+{
+  "name": "dis-order",
+  "version": "0.0.0",
+  "description": "An Angular task organization tool with WordPress as the backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/azanebrain/dis-order.git"
+  },
+  "author": "AJ Zane",
+  "license": "GPL-v2",
+  "bugs": {
+    "url": "https://github.com/azanebrain/dis-order/issues"
+  },
+  "homepage": "https://github.com/azanebrain/dis-order"
+}
