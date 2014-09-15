@@ -13,19 +13,65 @@ angular.module('disOrderApp')
     var Disorders = {};
     Disorders.list = [
       {
-        name: 'Graph'
-        , description: 'A graph is a graph'
+        name: 'Read Dune'
+        , description: 'Gonna get some spices'
+        , tag : [
+          'sci fi',
+          'relaxation'
+        ]
       }, {
-        name: 'Histogram'
-        , description: 'A histogram graph is a graph'
+        name: 'Watch Blade Runner'
+        , description: 'Androids dreaming of electric sheep'
+        , tag : [
+          'sci fi',
+          'relaxation'
+        ]
       }
       , {
-        name: 'Line'
-        , description: 'A line is a line'
+        name: 'Do more with Angular'
+        , description: '...'
+        , tag : [
+          'code',
+          'angular'
+        ]
       }
       , {
-        name: 'Scatter Plot'
-        , description: 'A scatter plot is a scatter'
+        name: 'Yeoman Angular generator'
+        , description: 'Dev tool'
+        , link: 'https://github.com/yeoman/generator-angular'
+        , tag : [
+          'code',
+          'angular',
+          'yeoman'
+        ]
+      }
+      , {
+        name: 'Bower'
+        , description: 'Dev tool'
+        , link: 'http://bower.io'
+        , tag : [
+          'code',
+          'bower'
+        ]
+      }
+      , {
+        name: 'NPM'
+        , description: 'Dev tool'
+        , link: 'https://www.npmjs.org/'
+        , tag : [
+          'code',
+          'node'
+        ]
+      }
+      , {
+        name: 'Angular Foundation'
+        , description: 'Dev tool'
+        , link: 'https://github.com/pineconellc/angular-foundation'
+        , tag : [
+          'code',
+          'angular',
+          'foundation'
+        ]
       }
     ];
 

@@ -6,11 +6,16 @@
     <br>Description: 
     <input type="text" value="Filter" ng-model="searchDisorders.description">
     <br>
+
   </div>
 
-  <div class="disorders-wrap">
-    <div class="disorder-item" ng-repeat="disorder in disorders.list | filter:searchDisorders">
+  <div class="disorders-wrap" style="width: 100%; background: #F0F0F0; position: relative; display: block; clear:both;">
+    <div class="disorder-item" ng-repeat="disorder in filtered=(disorders.list | filter:searchDisorders) " style="border: solid 1px black; width: 30%;  height: 125px; position: relative; display: inline-block">
       {{ disorder.name }} : {{ disorder.description }}
+      <br>Tags: 
+      <span>{{disorder.tag.join(', ')}}</span>
     </div>
+    <p>Total disorder: {{disorders.list.length}}</p>
+    <p>Number of results: {{filtered.length}}</p>
   </div>
 </div>
