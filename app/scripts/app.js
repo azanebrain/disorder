@@ -10,6 +10,7 @@
  */
 angular
   .module('disOrderApp', [
+    'angular.filter',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
@@ -23,6 +24,9 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/tag', {
+        templateUrl: 'views/tag.html'
       })
       .otherwise({
         redirectTo: '/'

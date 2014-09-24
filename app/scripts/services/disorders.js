@@ -13,24 +13,24 @@ angular.module('disOrderApp')
     var Disorders = {};
     Disorders.list = [
       {
-        name: 'Read Dune'
+        name: 'Dune'
         , description: 'Gonna get some spices'
-        , tag : [
-          'sci fi',
-          'relaxation'
+        , tags : [
+          'sci-fi',
+          'literature'
         ]
       }, {
-        name: 'Watch Blade Runner'
+        name: 'Blade Runner'
         , description: 'Androids dreaming of electric sheep'
-        , tag : [
-          'sci fi',
-          'relaxation'
+        , tags : [
+          'sci-fi',
+          'film'
         ]
       }
       , {
         name: 'Do more with Angular'
         , description: '...'
-        , tag : [
+        , tags : [
           'code',
           'angular'
         ]
@@ -39,7 +39,7 @@ angular.module('disOrderApp')
         name: 'Yeoman Angular generator'
         , description: 'Dev tool'
         , link: 'https://github.com/yeoman/generator-angular'
-        , tag : [
+        , tags : [
           'code',
           'angular',
           'yeoman'
@@ -49,7 +49,7 @@ angular.module('disOrderApp')
         name: 'Bower'
         , description: 'Dev tool'
         , link: 'http://bower.io'
-        , tag : [
+        , tags : [
           'code',
           'bower'
         ]
@@ -58,7 +58,7 @@ angular.module('disOrderApp')
         name: 'NPM'
         , description: 'Dev tool'
         , link: 'https://www.npmjs.org/'
-        , tag : [
+        , tags : [
           'code',
           'node'
         ]
@@ -67,7 +67,7 @@ angular.module('disOrderApp')
         name: 'Angular Foundation'
         , description: 'Dev tool'
         , link: 'https://github.com/pineconellc/angular-foundation'
-        , tag : [
+        , tags : [
           'code',
           'angular',
           'foundation'

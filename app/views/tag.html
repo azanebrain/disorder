@@ -9,7 +9,30 @@
     Tag:
     <input type="text" ng-model="searchDisorders.tags">
     <br>
+    Tag Array: <br>
+    <div ng-repeat="tag in distags" ng-model="tags">
+      <input 
+        type="checkbox"
+        id="{{tag}}"
+        ng-model="useTag[tag]"
+      > 
+      <label for="{{tag}}">{{ tag }}</label> 
+    </div>
+<!-- <input type="checkbox" ng-model="sci-fi"> sci-fi, relaxation -->
+
   </div>
+
+
+
+
+<div ng-repeat="cat in getCategories()">
+    <b><input type="checkbox" ng-model="filter[cat]" /> {{cat}}</b>
+</div>
+<div ng-repeat="w in filtered=(wines | filter:filterByCategory)">
+    {{w.name}} ({{w.tags}})
+</div>
+
+
 
   <div class="disorders-wrap" style="width: 100%; background: #F0F0F0; position: relative; display: block; clear:both;">
     <div class="disorder-item" ng-repeat="disorder in filtered=(disorders.list | filter:searchDisorders ) " style="border: solid 1px black; width: 30%;  height: 125px; position: relative; display: inline-block">
