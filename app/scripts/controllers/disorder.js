@@ -50,6 +50,12 @@ angular.module('disOrderApp')
     $scope.distags = arrayUnique(tagarray);
 
 
+
+
+  });
+
+angular.module('disOrderApp')
+  .controller('DisorderTaggingCtrl', function ($scope, disordersFact) {
  // $scope.colors = {Blue, Orange};
 
 $scope.colors = ['apple', 'orange', 'pear', 'naartjie'];
@@ -115,7 +121,4 @@ $scope.wines = [
     // angular.forEach($scope.distags, function(){
     //   console.debug("distag");
     // });
-
-
-
   });

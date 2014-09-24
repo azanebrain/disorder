@@ -22,16 +22,16 @@
 
   </div>
 
+<div ng-controller="DisorderTaggingCtrl">
 
+  <div ng-repeat="cat in getCategories()">
+      <b><input type="checkbox" ng-model="filter[cat]" /> {{cat}}</b>
+  </div>
+  <div ng-repeat="w in filtered=(wines | filter:filterByCategory)">
+      {{w.name}} ({{w.tags}})
+  </div>
 
-
-<div ng-repeat="cat in getCategories()">
-    <b><input type="checkbox" ng-model="filter[cat]" /> {{cat}}</b>
 </div>
-<div ng-repeat="w in filtered=(wines | filter:filterByCategory)">
-    {{w.name}} ({{w.tags}})
-</div>
-
 
 
   <div class="disorders-wrap" style="width: 100%; background: #F0F0F0; position: relative; display: block; clear:both;">
