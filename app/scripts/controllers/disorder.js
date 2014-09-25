@@ -20,15 +20,9 @@ angular.module('disOrderApp')
     var tagarray = [];
 
     angular.forEach($scope.disorders.list, function(value, tags){
-      //Loop through each entry 
-      //Separate out the tags on each entry into an array
-      //Test to see if the tag is already in our master tags array
-      //If not, add it.
-      //Repeat
+      // Loop through each entry, adding the tags to an array
 
-      //or, can I make an array of all the tags and simply remove duplicates? Is that faster
-
-      // var tagarray = value.tag;
+      // var tagarray = value.tag; //debug: Show the full tag
       // console.dir(tagarray); //debug: show what values are being added
       
       //combine the sub array into the big array
@@ -39,6 +33,7 @@ angular.module('disOrderApp')
       tagarray.push.apply(tagarray, value.tags);
 
     });
+    // This function returns only the unique values in an array
     var arrayUnique = function(a) {
         return a.reduce(function(p, c) {
             if (p.indexOf(c) < 0) p.push(c);
@@ -47,12 +42,16 @@ angular.module('disOrderApp')
     };
     // Only take the unique tags
     tagarray = arrayUnique(tagarray);
+    //Set it to a scope variable
     $scope.distags = arrayUnique(tagarray);
 
-
-
-
   });
+
+
+// #############
+// EXPERIMENTAL: 
+// #############
+
 
 angular.module('disOrderApp')
   .controller('DisorderTaggingCtrl', function ($scope, disordersFact) {

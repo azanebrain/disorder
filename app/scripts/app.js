@@ -11,6 +11,7 @@
 angular
   .module('disOrderApp', [
     'angular.filter',
+    'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
