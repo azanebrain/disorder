@@ -10,8 +10,8 @@
 angular.module('disOrderApp')
   .factory('DisorderData', ['$resource',
     function($resource){
-      return $resource('data/data.json', {}, {
-        query: {method:'GET', params:{phoneId:'data'}, isArray:true}
+      return $resource('http://disorder.dev/wp/wp-json/posts', {}, {
+        query: {method:'GET', params:{}, isArray:true}
       });
     }]);
 
@@ -21,6 +21,8 @@ angular.module('disOrderApp')
     var Disorders = {};
 
     Disorders.list = DisorderData.query();
-
+console.log("TEST");
+    console.debug(Disorders.list);
+console.log("Data: " + JSON.stringify(Disorders.list));
     return Disorders;
   }]);
