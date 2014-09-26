@@ -13,7 +13,9 @@ Make a duplicate of the wp-cli yaml default. Remove the `.default` file type.
 `sudo npm install`
 
 ## Install a new WP instance
+Make sure you've setup the wp-cli config file correctly (see setup).
 ```
+wp core download
 wp core config
 wp core install
 ```
