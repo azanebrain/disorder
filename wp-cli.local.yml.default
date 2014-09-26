@@ -1,0 +1,22 @@
+path: wp
+skip-plugins: ""
+color: false
+url: http://domain.com
+skip-plugins: ""
+user: adminusername
+color: false
+# disabled_commands:
+#   - db drop
+#   - plugin install
+# require:
+#   - path-to/command.php
+debug: false
+quiet: false
+
+core config:
+  dbname: dbname
+  dbuser: dbuser
+  dbpass: dbpass
+  extra-php: |
+    define( 'WP_DEBUG', true );
+    define( 'WP_POST_REVISIONS', 50 );

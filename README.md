@@ -9,7 +9,14 @@ There are 3 commands for running the app:
 `npm run test` : Runs all tests
 
 # Setup
+Make a duplicate of the wp-cli yaml default. Remove the `.default` file type.
 `sudo npm install`
+
+## Install a new WP instance
+```
+wp core config
+wp core install
+```
 
 # Project Dependencies 
 - [Bower](http://bower.io)

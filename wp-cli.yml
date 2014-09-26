@@ -1,8 +1,0 @@
-path: wp
-skip-plugins: ""
-color: false
-disabled_commands:
-  - db drop
-  - plugin install
-# require:
-#   - path-to/command.php
