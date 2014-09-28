@@ -13,8 +13,10 @@
 
   <div class="disorders-wrap" style="width: 100%; background: #F0F0F0; position: relative; display: block; clear:both;">
     <div class="disorder-item" ng-repeat="disorder in filtered=(disorders.list | filter:searchDisorders ) " style="border: solid 1px black; width: 30%;  height: 125px; position: relative; display: inline-block">
-      {{ disorder.title }} : {{ disorder.content }}
-      <br>Tags: 
+      {{ disorder.title }} :
+      <span ng-bind-html="disorder.content"></span>
+      <br>
+      Tags: 
       <span>{{disorder.tags.join(', ')}}</span>
     </div>
     <p>Total disorder: {{disorders.list.length}}</p>
