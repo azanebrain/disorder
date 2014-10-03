@@ -9,21 +9,19 @@
  */
 angular.module('disOrderApp')
   .controller('DisorderCtrl', function ($scope, disordersFact) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    //Set a scope object of our data
     $scope.disorders = disordersFact;
 
-    //Create a new array of the unique tags
     var tagarray = [];
 
     angular.forEach($scope.disorders.list, function(value, tags){
+      console.debug("forEach $scope.disorders.list");
+      //terms-post_tag-slug | name
+
       // Loop through each entry, adding the tags to an array
 
       // var tagarray = value.tag; //debug: Show the full tag
-      // console.dir(tagarray); //debug: show what values are being added
+      console.dir(tagarray); //debug: show what values are being added
       
       //combine the sub array into the big array
       //Which method is faster?:
@@ -79,7 +77,7 @@ $scope.colors = ['apple', 'orange', 'pear', 'naartjie'];
 
 $scope.wines = [
         { name: "Wine A", tags: "sci-fi" },
-        { name: "Wine B", tags: ["code", "angular"] },
+        { name: "Wine B", tags: {0:"code", 1:"angular"} },
         { name: "wine C", tags: "code" },
         { name: "Wine D", tags: "node" },
         { name: "Wine E", tags: "code" },

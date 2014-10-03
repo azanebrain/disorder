@@ -2,23 +2,28 @@
   <div class="disorders-filter">
     Filter all dis order.
     <br>Name: 
-    <input type="text" value="Filter" ng-model="searchDisorders.name">
+    <input type="text" value="Filter" ng-model="searchDisorders.title">
     <br>Description: 
-    <input type="text" value="Filter" ng-model="searchDisorders.description">
+    <input type="text" value="Filter" ng-model="searchDisorders.content">
     <br>
     Tag:
-    <input type="text" ng-model="searchDisorders.tags">
+    <input type="text" ng-model="searchDisorders.terms.post_tag.slug">
     <br>
   </div>
 
   <div class="disorders-wrap" style="width: 100%; background: #F0F0F0; position: relative; display: block; clear:both;">
-    <div class="disorder-item" ng-repeat="disorder in filtered=(disorders.list | filter:searchDisorders ) " style="border: solid 1px black; width: 30%;  height: 125px; position: relative; display: inline-block">
-      {{ disorder.title }} :
-      <span ng-bind-html="disorder.content"></span>
+
+    <div class="disorder-item" ng-repeat="disorder in filtered=(disorders.list | filter:searchDisorders ) " style="border: solid 1px black; width: 30%;  min-height: 125px; position: relative; display: inline-block">
+      <p>
+        <strong>{{ disorder.title }}:</strong>
+      </p>
+      <div ng-bind-html="disorder.content"></div>
       <br>
-      Tags: 
-      <span>{{disorder.tags.join(', ')}}</span>
+      Tags: <span ng-repeat="term in disorder.terms.post_tag">{{term.slug}}, </span> 
+      <br>
     </div>
+
+
     <p>Total disorder: {{disorders.list.length}}</p>
     <p>Number of results: {{filtered.length}}</p>
   </div>

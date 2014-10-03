@@ -14,6 +14,9 @@ angular.module('disOrderApp')
         query: {method:'GET', params:{}, isArray:true}
       });
     }]);
+// Make this more dynamic: get posts, get tags, get X
+//get tags
+// http://disorder.dev/wp/wp-json/taxonomies/post_tag/terms
 
 angular.module('disOrderApp')
   .service('disordersFact', ['DisorderData', function disordersFact(DisorderData) {
@@ -21,8 +24,6 @@ angular.module('disOrderApp')
     var Disorders = {};
 
     Disorders.list = DisorderData.query();
-console.log("TEST");
-    console.debug(Disorders.list);
-console.log("Data: " + JSON.stringify(Disorders.list));
+    // console.log("Data: " + JSON.stringify(Disorders.list));
     return Disorders;
   }]);
