@@ -27,6 +27,9 @@
   <div ng-repeat="cat in getCategories()">
       <b><input type="checkbox" ng-model="filter[cat]" /> {{cat}}</b>
   </div>
+
+  <div id="totalPos">Total: {{(wines | filter:filterByCategory | filter:{tag:'filter[cat]'}).length}}</div>
+
   <div ng-repeat="w in filtered=(wines | filter:filterByCategory)">
       {{w.name}} ({{w.tags}})
   </div>
