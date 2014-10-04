@@ -10,6 +10,11 @@
     <!-- <input type="text" ng-model="searchDisorders.slug"> -->
     <!-- <br> -->
   </div>
+  <div>
+    Unique tags:
+    <br>
+    <label ng-repeat="term in disorders.uniqueTags">{{term.name}}, </label>
+  </div>
 
   <div class="disorders-wrap" style="width: 100%; background: #F0F0F0; position: relative; display: block; clear:both;">
 
