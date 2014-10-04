@@ -5,10 +5,11 @@
     <input type="text" value="Filter" ng-model="searchDisorders.title">
     <br>Description: 
     <input type="text" value="Filter" ng-model="searchDisorders.content">
+    <br> Tag:
+    <input type="text" ng-model="searchDisorders.terms">
     <br>
-    <!-- Tag: -->
-    <!-- <input type="text" ng-model="searchDisorders.slug"> -->
-    <!-- <br> -->
+    Strict search:
+    <input type="checkbox" ng-model="strict">
   </div>
   <div>
     Unique tags:
@@ -18,13 +19,13 @@
 
   <div class="disorders-wrap" style="width: 100%; background: #F0F0F0; position: relative; display: block; clear:both;">
 
-    <div class="disorder-item" ng-repeat="disorder in filtered=(disorders.list | filter:searchDisorders ) " style="border: solid 1px black; width: 30%;  min-height: 125px; position: relative; display: inline-block; overflow: hidden">
+    <div class="disorder-item" ng-repeat="disorder in filtered=(disorders.list | filter:searchDisorders:strict ) " style="border: solid 1px black; width: 30%;  min-height: 125px; position: relative; display: inline-block; overflow: hidden">
       <p>
         <strong>{{ disorder.title }}:</strong>
       </p>
       <div ng-bind-html="disorder.content"></div>
       <br>
-      Tags: <span ng-repeat="term in disorder.terms.post_tag">{{term.slug}}, </span> 
+      Tags: <span ng-repeat="term in disorder.terms.post_tag | filter:searchDisorders.terms">{{term.slug}}, </span> 
       <br>
     </div>
 
