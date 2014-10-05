@@ -22,6 +22,29 @@
     background: #EC9393;
   }
 }
+
+.disorder-wrap{
+  width: 100%; 
+  clear: both;
+  display: block; 
+  position: relative; 
+}
+.disorder-item {
+  border: solid 1px black;
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  max-width: 32%;
+}
+.disorders-wrap:before,
+.disorders-wrap:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.disorders-wrap:after {
+    clear: both;
+}
+
 // Default styles from the scaffold:
 
 .browsehappy {

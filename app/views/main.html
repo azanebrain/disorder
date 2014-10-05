@@ -24,9 +24,8 @@
     </span>
   </div>
 
-  <div class="disorders-wrap" style="width: 100%; background: #F0F0F0; position: relative; display: block; clear:both;">
-
-    <div class="disorder-item" ng-repeat="disorder in filtered=(disorders.list | filter:searchDisorders:strict ) " style="border: solid 1px black; width: 30%;  min-height: 125px; position: relative; display: inline-block; overflow: hidden">
+  <div class="disorders-wrap">
+    <div class="disorder-item" ng-repeat="disorder in filtered=(disorders.list | filter:searchDisorders:strict ) ">
       <p>
         <strong>{{ disorder.title }}:</strong>
       </p>
@@ -35,8 +34,9 @@
       Tags: <span ng-repeat="term in disorder.terms.post_tag | filter:searchDisorders.terms">{{term.slug}}, </span> 
       <br>
     </div>
+  </div>
 
-
+  <div>
     <p>Total disorder: {{disorders.list.length}}</p>
     <p>Filtered disorder: {{filtered.length}}</p>
   </div>
