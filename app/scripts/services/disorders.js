@@ -23,10 +23,7 @@ angular.module('disOrderApp')
         query: {method:'GET', params:{}, isArray:true}
       });
     }]);
-// Make this more dynamic: get posts, get tags, get X
-// This will get all of the terms as an object:
-// http://disorder.dev/wp/wp-json/taxonomies/post_tag/terms
-
+  
 angular.module('disOrderApp')
   .service('disordersFact', ['DisorderData', 'DisorderDataTaxonomies', function disordersFact(DisorderData , DisorderDataTaxonomies) {
     // AngularJS will instantiate a singleton by calling "new" on this function
@@ -36,9 +33,7 @@ angular.module('disOrderApp')
     Disorders.list = DisorderData.query();
     // console.log("Data: " + JSON.stringify(Disorders.list));
 
-    //Create the array of all tags here
-    // Disorders.uniqueTags = somefunction(Disorders.list);
-    console.log("Create the array of all tags here, in the DisorderData Factory");
+    //Create the array of all tags
     Disorders.uniqueTags = DisorderDataTaxonomies.query();
 
     // Return the Disorders object

@@ -1,20 +1,27 @@
 <div ng-controller="DisorderCtrl">
+
+
   <div class="disorders-filter">
-    Filter all dis order.
-    <br>Name: 
-    <input type="text" value="Filter" ng-model="searchDisorders.title">
-    <br>Description: 
-    <input type="text" value="Filter" ng-model="searchDisorders.content">
-    <br> Tag:
-    <input type="text" ng-model="searchDisorders.terms">
-    <br>
-    Strict search:
-    <input type="checkbox" ng-model="strict">
+    <h1>Filter all dis order:</h1>
+    <p>
+      Name: 
+      <input type="text" value="Filter" ng-model="searchDisorders.title">
+      <br>Description: 
+      <input type="text" value="Filter" ng-model="searchDisorders.content">
+      <br> Tag:
+      <input type="text" ng-model="searchDisorders.terms">
+      <br>
+      Strict search:
+      <input type="checkbox" ng-model="strict">
+    </p>
   </div>
-  <div>
+  <div class="disorders-unique-tags">
     Unique tags:
     <br>
-    <label ng-repeat="term in disorders.uniqueTags">{{term.name}}, </label>
+    <span ng-repeat="term in disorders.uniqueTags">
+      <input type="checkbox" ng-model="filter['{{term.slug}}']" id="{{term.slug}}" class="hidden" />
+      <label for="{{term.slug}}">{{term.name}}</label>&nbsp;
+    </span>
   </div>
 
   <div class="disorders-wrap" style="width: 100%; background: #F0F0F0; position: relative; display: block; clear:both;">
@@ -31,6 +38,6 @@
 
 
     <p>Total disorder: {{disorders.list.length}}</p>
-    <p>Number of results: {{filtered.length}}</p>
+    <p>Filtered disorder: {{filtered.length}}</p>
   </div>
 </div>

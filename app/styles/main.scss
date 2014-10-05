@@ -1,6 +1,29 @@
 // bower:scss
 // endbower
 
+// Custom 
+
+.hidden{
+  display: none;
+}
+
+
+.disorders-unique-tags{
+  margin-bottom: 20px;
+  
+  input + label {
+    background: #E4E8FF;
+    border: solid 1px #333;
+    line-height: 200%;
+    padding: 2px;
+  }
+
+  input:checked + label{
+    background: #EC9393;
+  }
+}
+// Default styles from the scaffold:
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;

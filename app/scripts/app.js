@@ -26,10 +26,7 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-      .when('/tag', {
-        templateUrl: 'views/tag.html'
-      })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/views/about.html'
       });
   });
