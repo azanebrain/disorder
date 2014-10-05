@@ -1,0 +1,10 @@
+# Header set Access-Control-Allow-Origin "*"
+
+ErrorDocument 401 "Unauthorized Access"
+ErrorDocument 403 "Forbidden"
+
+# Protect important files:
+<FilesMatch "\.(htaccess|wp-config.php|debug.log)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
