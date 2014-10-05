@@ -25,7 +25,7 @@ If hosting on a server, duplicate .htaccess.default and rename as .htaccess, or 
 
 ## Plugins
 You will need the [JSON REST API](https://wordpress.org/plugins/json-rest-api/) by Ryan McCue
-I suggest you have a backup plugin ([Updraft Plus](https://wordpress.org/plugins/updraftplus/))
+I suggest you have a backup plugin ([Updraft Plus](https://wordpress.org/plugins/updraftplus/)), and a security plugin ([BruteProtect](https://wordpress.org/plugins/bruteprotect/) | [iThemes Security](https://wordpress.org/plugins/better-wp-security/))
 
 # Project Dependencies 
 - [Bower](http://bower.io)
