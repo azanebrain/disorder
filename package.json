@@ -1,6 +1,10 @@
 {
   "name": "disorder",
   "version": "0.1.0",
+  "author" : { "name" : "AJ Zane"
+    , "email" : "androiddreams@ajzane.com"
+    , "url" : "http://github.com/azanebrain"
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.5",
