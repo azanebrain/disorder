@@ -13,7 +13,7 @@ There are 3 commands for running the app:
 
 # Package
 
-Run `npm run build` to create the app in the /dist folder. The code in this folder can be used as the static site. You will also need to setup a WordPress site with the JSON REST API plugin for the static site to communicate with.
+Run `npm run build` to create the app in the /dist folder. The code in this folder can be used as the static site. You will also need to setup a WordPress site with the JSON REST API plugin for the static site to communicate with.g
 
 # Setup
 
