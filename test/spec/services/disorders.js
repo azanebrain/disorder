@@ -11,8 +11,8 @@ describe('Service: Disorders', function () {
     Disorders = _Disorders_;
   }));
 
-  it('should do something', function () {
-    expect(!!Disorders).toBe(true);
-  });
+  // it('should do something', function () {
+  //   expect(!!Disorders).toBe(true);
+  // });
 
 });

@@ -11,7 +11,7 @@ There are 3 commands for running the app:
 
 `npm run serve` : Opens the app on localhost:9000
 
-`npm run test` : Runs all tests
+`npm test` : Runs all tests
 
 # Package
 
